@@ -1,0 +1,17 @@
+{
+  "name": "mithilana-makhana-store",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Mithilana Makhana direct website ordering, Paytm online payments, WhatsApp admin notifications and separate admin panel.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "paytmchecksum": "^1.5.1",
+    "express": "^4.21.2"
+  }
+}
