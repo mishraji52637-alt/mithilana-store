@@ -1,0 +1,34 @@
+MITHILANA - DIRECT ORDERS + PAYTM + WHATSAPP + SEPARATE ADMIN PANEL
+
+1) SERVER
+- Node.js 18+
+- npm install
+- npm start
+- Do not open index.html directly from your phone. The API must run on the server.
+
+2) PAYTM
+- Create/activate a Paytm Payment Gateway merchant account.
+- Start with staging/test credentials.
+- Add PAYTM_MID, PAYTM_MERCHANT_KEY, PAYTM_WEBSITE and PAYTM_ENV to server environment variables.
+- The website uses Paytm JS Checkout: backend creates a transaction token, the customer sees Paytm checkout on the website, and the backend verifies payment through Transaction Status before marking the order paid.
+- For production, use the production MID/merchant key and production website value from your Paytm dashboard.
+
+3) WHATSAPP
+- Configure Meta WhatsApp Cloud API on your business account.
+- Put the access token and phone number ID only in server environment variables.
+- ADMIN_WHATSAPP defaults to 918434990815.
+- The server sends order notifications to the configured admin number. Messaging/template rules are controlled by Meta/WhatsApp and the business account configuration.
+
+4) ADMIN PANEL
+- Customer store: /
+- Private admin panel: /admin
+- Set ADMIN_PASSWORD to your own strong password.
+- Do not share the password.
+
+5) DATABASE
+- For this starter deployment, orders are stored in data/orders.json. For a larger production store, move orders to a managed database.
+
+6) IMPORTANT
+- Use HTTPS for the live website.
+- Never put PAYTM_MERCHANT_KEY, WhatsApp token, or ADMIN_PASSWORD in index.html.
+- Test the complete flow with Paytm staging before switching to production.
